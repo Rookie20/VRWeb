@@ -13,6 +13,7 @@ using VRWeb.Models;
 namespace VRWeb.Controllers
 {
     [Authorize]
+    //Franko is bot
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
