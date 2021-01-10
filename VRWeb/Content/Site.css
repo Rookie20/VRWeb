@@ -1,4 +1,6 @@
-﻿.components .row, text {
+﻿@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&family=Roboto+Condensed:wght@300&family=Ubuntu:wght@300&display=swap');
+
+.components .row, text {
     margin-left: 15px;
 }
 
@@ -23,15 +25,16 @@
 }
 
 .toggle-edit {
-    margin-top: 10px !important;
+    margin-top: 6.5% !important;
 }
 
 #left-sidebar {
-    padding-top: 60px;
+    padding-top: 10%;
 }
 .toolbar {
 	padding-left: 10px;
-	padding-bottom: 40px;
+	margin-top: 89px;
+    padding-bottom: 42px;
 }
 
 
@@ -39,109 +42,344 @@
 
 
 
-.container {
-	padding: 0px 0px !important;
-}
-.navbar-right {
-	padding-left: 20% !important;
+
+body {
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Lato';
 }
 
-.carousel-item {
-	height: 100vh;
-	min-height: 300px;
-}
-.carousel-caption {
-	bottom: 220px;
-}
-.carousel-caption h5 {
-	font-size: 45px;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	margin-top: 25px;
-	font-family: merienda;
-}
-.carousel-caption p {
-	width: 60%;
-	margin: auto;
-	font-size: 18px;
-	line-height: 1.9;
-	font-family: poppins;
-}
-.carousel-caption a {
-	text-transform: uppercase;
-	background: #262626;
-	padding: 10px 30px;
-	display: inline-block;
-	color: #fff;
-	margin-top: 15px;
-}
-.carousel-caption a:link {
-	text-decoration: none !important;
-}
-	.carousel-caption a:link:hover {
-		color: #007BFF;
-	}
-.navbar-nav a {
-	font-family: poppins;
-	font-size: 18px;
-	text-transform: uppercase;
-	font-weight: bold;
-}
-	.navbar-nav a:link {
-		padding-left: 20px !important;
-	}
-	.navbar-nav a:link:hover {
-		background-color: transparent !important;
-		color: white !important;
-	}
-.navbar-nav a:hover {
-	color: white !important;
+.navbar-brand {
+    font-family: 'Pacifico';
+    font-size: 30px;
+    color: #00E8E8 !important;
 }
 
-.navbar-light .navbar-brand {
-	color: #fff;
-	font-size: 25px;
-	text-transform: uppercase;
-	font-weight: bold;
-	letter-spacing: 2px;
-}
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
-	color: #fff;
-}
-.navbar-light .navbar-nav .nav-link {
-	color: #fff;
-}
-.navbar-nav {
-	text-align: center;
-}
 .nav-link {
-	padding: .2rem 1rem;
+    font-size: 18px;
+    margin: 15px;
+    color: black !important;
+    font-family: 'Roboto Condensed';
 }
-.nav-link.active, .nav-link:focus {
-	color: #fff;
-}
-.navbar-toggler {
-	padding: 1px 5px;
-	font-size: 18px;
-	line-height: 0.3;
-	background: #fff;
-}
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-	color: #fff;
-}
-.w-100 {
-	height: 100vh;
-}
-@media only screen and (max-width: 767px) {
-	.navbar-nav.ml-auto {
-		background: rgba(0, 0, 0, 0.5);
-	}
-	.navbar-nav a {
-		font-size: 14px;
-		font-weight: normal;
-	}
+    .nav-link:hover{
+        color: lightcoral !important;
+    }
+    
+    .active .nav-link {
+        color: lightcoral !important;
+    }
+
+.site-content {
+    background-image: url("Images/oculus-rift-s-2-1.jpg");
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-.moreInfoButton {
-	text-decoration: none;
+.site-title {
+    margin-top: 30%;
+    margin-bottom: 6%;
+    margin-left: 3%;
+    font-size: 50px;
 }
+
+.site-desc {
+    font-size: 18px;
+    padding-left: 13%;
+}
+
+.site-btn1 {
+    margin-left: 33%;
+    background-color: black;
+    color: white;
+}
+
+.site-btn2 {
+    background-color: white;
+}
+
+.site-btn1, .site-btn2 {
+    margin-top: 5%;
+    margin-bottom: 35%;
+}
+
+
+
+/* Section-1 */
+
+.section-1 .heading-1 {
+    margin-top: 8%;
+}
+
+.section-1 .heading-2 {
+    margin-bottom: 5%;
+    font-size: 39px;
+}
+
+.section-1 .param-1 {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 5%;
+}
+
+.section-1 .card-text .param-1 {
+    color: rgba(0, 0, 0, 0.59);
+}
+
+.section-1 {
+    margin-bottom: 5%;
+}
+
+.card {
+    width: 20rem;
+}
+
+
+
+/*Section-2*/
+
+.section-2 .container-fluid {
+    background-image: url("Images/pexels-mali-maeder-756439.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section-2 .heading-1 {
+    margin-top: 30%;
+    margin-bottom: 4%;
+    font-family: 'Righteous';
+    width: 80%;
+    color: whitesmoke;
+}
+
+.section-2 .para {
+    width: 80%;
+    font-family: 'Ubuntu';
+    color: whitesmoke;
+}
+
+.section-2 .btn {
+    margin-bottom: 15%;
+    width: 30%;
+    padding: 2% 5%;
+}
+
+
+/*Section-3*/
+
+.section-3 {
+    margin-top: 6%;
+}
+
+.section-3 i {
+    color: #00E8E8;
+}
+
+.section-3 p {
+    color: rgba(0, 0, 0, 0.59);
+}
+
+
+
+/*Section 4*/
+
+.section-4 {
+    margin-top: 8%;
+}
+
+.section-4 .row .col-md-7, .col-md-5 {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.section-4 .col-md-5 {
+    padding-left: 9%;
+}
+
+.section-4 a {
+    color: lightseagreen;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.section-4 .param-1 {
+    color: white;
+    font-family: 'Roboto Condensed';
+    margin-top: 7%;
+    font-size: 23px;
+}
+
+
+/*footer*/
+
+.social i {
+    color: #00E8E8;
+    font-size: 40px;
+}
+
+
+/*Media Screen*/
+
+@media screen and (max-width: 1136px) {
+    .section-1 .card {
+        width: 14rem;
+    }
+
+    .section-4 .col-md-7 img{
+        width: 610px;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .section-1 .col-md-4 {
+        margin-right: 15%;
+    }
+
+    .section-1 .card {
+        width: 14rem;
+    }
+
+    .section-4 .col-md-5{
+        margin-top: 18%;
+    }
+    .section-4 .col-md-5 a {
+        color: whitesmoke;
+        font-weight: bold;
+    }
+
+    .section-4 .col-md-5 .param-1 {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 768px){
+    .site-content .site-btn2 {
+        margin-right: 12%;
+    }
+
+    .section-1 .card {
+        width: 14rem;
+    }
+    .section-4 .col-md-7 img {
+        width: 100%;
+    }
+    .section-4 .col-md-5 .param-1 {
+        display: block;
+    }
+
+    .section-1 .card {
+        margin-left: 20%;
+    }
+}
+
+@media screen and (max-width: 541px) {
+    .site-content .site-btn2 {
+        margin-left: 2%;
+    }
+
+    .site-content .site-btn1 {
+        margin-left: 140px;
+    }
+}
+
+@media screen and (max-width: 492px) {
+
+    .site-content .site-btn2 {
+        margin-left: 2%;
+    }
+
+    .site-content .site-btn1 {
+        margin-left: 100px;
+    }
+
+    .section-1 .col-md-4 {
+        margin-right: 28%;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .site-content .site-btn2 {
+        margin-left: 2%;
+    }
+
+    .site-content .site-btn1 {
+        margin-left: 90px;
+    }
+
+}
+
+@media screen and (max-width: 441px) {
+    .site-content .site-btn2 {
+        margin-left: 2%;
+    }
+
+    .site-content .site-btn1 {
+        margin-left: 70px;
+    }
+}
+
+@media screen and (max-width: 398px) {
+    .site-content .site-btn2 {
+        margin-left: 2%;
+    }
+
+    .site-content .site-btn1 {
+        margin-left: 50px;
+    }
+}
+
+    @media screen and (max-width: 380px) {
+        .section-1 .col-md-4 {
+            margin-left: 25%;
+        }
+
+        .site-content .site-btn2 {
+            margin-left: 2%;
+        }
+
+        .site-content .site-btn1 {
+            margin-left: 40px;
+        }
+
+        .section-1 .card {
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .site-content .site-title {
+            font-size: 30px;
+            padding-left: 15%;
+        }
+
+        .site-content .site-btn2 {
+            display: none;
+        }
+
+        .site-content .site-btn1 {
+            margin-left: 33%;
+        }
+
+        .section-1 .heading-1, .section-1 .heading-2 {
+            font-size: 25px;
+        }
+
+        .section-1 .col-md-4 {
+            padding: 5%;
+            margin-left: 8%;
+        }
+
+        .section-1 .card {
+            width: 10rem;
+        }
+
+        .section-4 .col-md-5 {
+            padding: 0% 15%;
+        }
+
+        footer input[type="button"] {
+            margin-top: 5%;
+        }
+    }

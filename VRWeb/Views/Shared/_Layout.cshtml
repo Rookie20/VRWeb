@@ -9,42 +9,74 @@
 
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="~/VRSetup/dist/aframe-environment-component.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Voces" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
 
 </head>
 <body>
-    <div class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container">
-            <div class="navbar-header" style="padding-left: 100px">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            @Html.ActionLink("Virtual Reality", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+                    aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse"></div>
+            <div class="collapse navbar-collapse" style="margin-right: 2%" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li>
+                        @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
-        </div>
-    </div>
+        </nav>
+    </header>
     <div class="body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="section-footer text-center">
+                <h4 style="margin-top: 4%;"> Find more information about VR from Us</h4>
+                <h4 class="my-4"> If you need any help</h4>
+
+                <div class="form-inline justify-content-center">
+                    <input type="text" name="Email" id="email" placeholder="Email" size="40" class="form-control px-4 py-2" />
+                    <input type="button" value="Contact Us" class="btn btn-danger px-4 py-2" />
+                </div>
+
+                <div class="social" style="margin: 5%;">
+                    <div class="d-flex flex-row justify-content-center">
+                        <i class="fab fa-facebook m-2"></i>
+                        <i class="fab fa-twitter m-2"></i>
+                        <i class="fab fa-instagram m-2"></i>
+                        <i class="fab fa-youtube m-2"></i>
+                        <i class="fab fa-twitch m-2"></i>
+                    </div>
+                </div>
+
+                <h5 style="color: lightcoral">&copy; @DateTime.Now.Year - VR Web</h5>
+            </div>
         </footer>
     </div>
+
+
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script>
+        window.sr = ScrollReveal({ duration: 1000 });
+        sr.reveal('.site-content .d-flex');
+        sr.reveal('.section-1 .card');
+        sr.reveal('.section-2 .d-flex');
+        sr.reveal('.section-3 .col-md-4');
+        sr.reveal('.section-4 .col-md-7, .col-md-5');
+    </script>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
