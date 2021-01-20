@@ -2,14 +2,14 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <script src="~/VRSetup/dist/aframe-environment-component.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
           integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
 
@@ -29,10 +29,10 @@
                         @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                     <li>
-                        @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })
+                        @Html.ActionLink("Particle", "PolygonShredder", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                     <li>
-                        @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
+                        @Html.ActionLink("VR Game Demo", "VRGameDemo", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
@@ -41,7 +41,6 @@
     </header>
     <div class="body-content">
         @RenderBody()
-        <hr />
         <footer>
             <div class="section-footer text-center">
                 <h4 style="margin-top: 4%;"> Find more information about VR from Us</h4>

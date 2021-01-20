@@ -20,7 +20,14 @@ namespace VRWeb.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult VRGameDemo()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult PolygonShredder()
         {
             ViewBag.Message = "Your contact page.";
 

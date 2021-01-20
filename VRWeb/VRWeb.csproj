@@ -199,6 +199,9 @@
     <Content Include="Content\Images\pexels-julia-m-cameron-4144293.jpg" />
     <Content Include="Content\Images\pexels-mali-maeder-756439.jpg" />
     <Content Include="Content\IndexStyleSheet.css" />
+    <Content Include="Content\PolygonImages\snapshot.jpg" />
+    <Content Include="spotlight.jpg" />
+    <Content Include="Content\PolygonImages\thumb.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="FontawesomeIcons\attribution.js" />
     <Content Include="FontawesomeIcons\css\all.css" />
@@ -1904,6 +1907,16 @@
     <Content Include="FontawesomeIcons\webfonts\fa-solid-900.ttf" />
     <Content Include="FontawesomeIcons\webfonts\fa-solid-900.woff" />
     <Content Include="FontawesomeIcons\webfonts\fa-solid-900.woff2" />
+    <Content Include="PolygonShredder\js\dat.gui.min.js" />
+    <Content Include="PolygonShredder\js\Detector.js" />
+    <Content Include="PolygonShredder\js\isMobile.min.js" />
+    <Content Include="PolygonShredder\js\main-boxels.js" />
+    <Content Include="PolygonShredder\js\OrbitControls.js" />
+    <Content Include="PolygonShredder\js\Simulation.js" />
+    <Content Include="PolygonShredder\js\THREE.FBOHelper.js" />
+    <Content Include="PolygonShredder\js\THREE.GeometryUtils.js" />
+    <Content Include="PolygonShredder\js\three.js" />
+    <Content Include="PolygonShredder\js\three.min.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -2029,7 +2042,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\VRGameDemo.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -2065,6 +2078,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Home\PolygonShredder.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

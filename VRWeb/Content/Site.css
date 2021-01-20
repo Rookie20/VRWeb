@@ -18,6 +18,9 @@
 .a-enter-vr {
     position: relative !important;
 }
+.a-enter-vr-button {
+    margin-bottom: 76px;
+}
 
 .a-canvas {
     position: relative !important;
@@ -383,3 +386,112 @@ body {
             margin-top: 5%;
         }
     }
+
+
+
+
+
+
+
+
+
+
+.polygonBody {
+    overflow: hidden;
+    font-family: tahoma, sans-serif;
+    font-size: 12px;
+    background-color: #202020;
+}
+
+    .polygonBody #container {
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+        .polygonBody #container #intro {
+            position: absolute;
+            padding-top: 150px;
+            left: 0;
+            top: 0;
+            padding: 50px 0px;
+            left: auto;
+            pointer-events: none;
+            transition: opacity 250ms ease-out;
+            color: white;
+        }
+
+        .polygonBody #container #intro h1 {
+            font-size: 45.5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            line-height: 1em;
+        }
+
+        .polygonBody #intro h2 {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin-bottom: 1em;
+        }
+
+
+        .polygonBody #intro li {
+            font-weight: normal;
+            font-size: 11px;
+        }
+    .polygonBody #closeBtn {
+        font-size: 14px;
+        border: 1px solid white;
+        border-radius: 20px;
+        display: inline;
+        padding: 10px;
+        pointer-events: auto;
+        cursor: pointer;
+    }
+
+        .polygonBody #closeBtn:hover {
+            color: red;
+        }
+
+    .polygonBody .hidden {
+        opacity: 0
+    }
+
+    .polygonBody #sizes {
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }
+
+    .polygonBody #intro a {
+        pointer-events: auto;
+    }
+
+    .polygonBody #loaded {
+        display: none
+    }
+
+    .polygonBody #loading {
+        padding: 20px 0;
+        text-align: center
+    }
+
+@media screen and (max-width: 700px) {
+    .polygonBody body {
+        font-size: 14px;
+    }
+    .polygonBody #instructions {
+        display: none;
+    }
+
+    .polygonBody #sizes {
+        margin: 10px 0 40px 0;
+    }
+
+    .polygonBody #minIntro {
+        text-align: center;
+        width: 100%;
+    }
+}
