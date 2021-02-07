@@ -1,0 +1,77 @@
+﻿@model IEnumerable<VRWeb.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Perdoruesit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Perdoruesit</h2>
+<table class="table table-bordered table-hover" @*id="userTable"*@>
+    <tr>
+        <th> @Html.DisplayNameFor(model => model.FullName)</th>
+        <th> @Html.DisplayNameFor(model => model.Email) </th>
+        <th> @Html.DisplayNameFor(model => model.Datelindja) </th>
+        <th> @Html.DisplayNameFor(model => model.PhoneNumber) </th>
+        <th>@Html.DisplayNameFor(model => model.TwoFactorEnabled) </th>
+        <th> @Html.DisplayNameFor(model => model.Roles) </th>
+        <th class="text-center"> Edit</th>
+        <th class="text-center"> Delete </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr @*id="User@(item.Id)"*@>
+            <td> @Html.DisplayFor(modelItem => item.FullName) </td>
+            <td> @Html.DisplayFor(modelItem => item.Email) </td>
+            <td> @Html.DisplayFor(modelItem => item.Datelindja) </td>
+            <td>
+                @if (item.PhoneNumber != null)
+                {
+                    <p class="text-center">@Html.DisplayFor(modelItem => item.PhoneNumber)</p>
+                }
+                else
+                {
+                    <p class="text-center"><i style="color: red; font-size: 17px;"> null </i></p>
+                }
+            </td>
+            <td> @Html.DisplayFor(modelItem => item.TwoFactorEnabled) </td>
+            <td>
+                @if (item.Email == "admin@vrweb.com")
+                {
+                    <p>Admin</p>
+
+                }
+                else
+                {
+                    <p> User </p>
+                }
+            </td>
+            <td>
+                @if (item.Email != "admin@vrweb.com")
+                {
+
+                    <p class="text-center">@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "kot1 hover" })</p>
+
+                }
+                else
+                {
+                    <p class="text-center">Cannot be Edited</p>
+                }
+            </td>
+            <td>
+                @if (item.Email != "admin@vrweb.com")
+                {
+
+                   <p class="text-center">@Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "kot1 hover" })</p>
+
+                }
+                else
+                {
+                    <p class="text-center">Cannot be Deleted</p>
+                }
+            </td>
+            </tr>
+        }
+</table>
+
+@*@section Scripts{
+    <script src="~/Scripts/CustomScripts/DeleteUser.js"></script>
+}*@
