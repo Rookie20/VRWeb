@@ -172,20 +172,26 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdministrimiController.cs" />
+    <Compile Include="Controllers\FaqeKontaktController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PaketaInfoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101231057544_InitialDatabase.cs" />
-    <Compile Include="Migrations\202101231057544_InitialDatabase.Designer.cs">
-      <DependentUpon>202101231057544_InitialDatabase.cs</DependentUpon>
+    <Compile Include="Migrations\202101231915054_Initial.cs" />
+    <Compile Include="Migrations\202101231915054_Initial.Designer.cs">
+      <DependentUpon>202101231915054_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ContactModels.cs" />
+    <Compile Include="Models\ContactUsPage.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PaketaInfo.cs" />
+    <Compile Include="Models\PreventFromUrl.cs" />
+    <Compile Include="Models\ValidateDateRange.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -206,6 +212,30 @@
     <Content Include="Content\Images\pexels-mali-maeder-756439.jpg" />
     <Content Include="Content\IndexStyleSheet.css" />
     <Content Include="Content\PolygonImages\snapshot.jpg" />
+    <Content Include="Images\ContactPage\blurcontact.jpg" />
+    <Content Include="Images\images.jpg" />
+    <Content Include="Images\login.jpg" />
+    <Content Include="Images\officePin.png" />
+    <Content Include="Images\Paketa\France.jpg" />
+    <Content Include="Images\Paketa\Germany.jpg" />
+    <Content Include="Images\Paketa\Italy.jpg" />
+    <Content Include="Images\Progressively-Loading-Images-With-Blur-Effect-min.png" />
+    <Content Include="Images\Services\France\FranceServices.jpg" />
+    <Content Include="Images\Services\France\LyonServices.jpg" />
+    <Content Include="Images\Services\France\NiceServices.jpg" />
+    <Content Include="Images\Services\France\ParisServices.jpg" />
+    <Content Include="Images\Services\Germany\BerlinServices.jpg" />
+    <Content Include="Images\Services\Germany\FrankfurtServices.jpg" />
+    <Content Include="Images\Services\Germany\GermanyServices.jpg" />
+    <Content Include="Images\Services\Germany\MunichServices.jpg" />
+    <Content Include="Images\Services\Italy\ItalyService.jpg" />
+    <Content Include="Images\Services\Italy\MilanoServices.jpg" />
+    <Content Include="Images\Services\Italy\RomeServices.jpg" />
+    <Content Include="Images\Services\Italy\VeniceServices.jpg" />
+    <Content Include="Images\thinking.jpg" />
+    <Content Include="Scripts\CustomScripts\DeleteMessage.js" />
+    <Content Include="Scripts\CustomScripts\DeletePaketa.js" />
+    <Content Include="Scripts\CustomScripts\DeleteUser.js" />
     <Content Include="spotlight.jpg" />
     <Content Include="Content\PolygonImages\thumb.jpg" />
     <Content Include="favicon.ico" />
@@ -2085,6 +2115,24 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\PolygonShredder.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\France.cshtml" />
+    <Content Include="Views\Home\Germany.cshtml" />
+    <Content Include="Views\Home\Italy.cshtml" />
+    <Content Include="Views\FaqeKontakt\Delete.cshtml" />
+    <Content Include="Views\FaqeKontakt\Edit.cshtml" />
+    <Content Include="Views\FaqeKontakt\Index.cshtml" />
+    <Content Include="Views\Administrimi\Delete.cshtml" />
+    <Content Include="Views\Administrimi\Edit.cshtml" />
+    <Content Include="Views\Administrimi\Index.cshtml" />
+    <Content Include="Views\Login.cshtml" />
+    <Content Include="Views\Register.cshtml" />
+    <Content Include="Views\PaketaInfoes\Delete.cshtml" />
+    <Content Include="Views\PaketaInfoes\Details.cshtml" />
+    <Content Include="Views\PaketaInfoes\France.cshtml" />
+    <Content Include="Views\PaketaInfoes\Germany.cshtml" />
+    <Content Include="Views\PaketaInfoes\Index.cshtml" />
+    <Content Include="Views\PaketaInfoes\Italy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2101,8 +2149,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101231057544_InitialDatabase.resx">
-      <DependentUpon>202101231057544_InitialDatabase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101231915054_Initial.resx">
+      <DependentUpon>202101231915054_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

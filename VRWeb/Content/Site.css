@@ -495,3 +495,435 @@ body {
         width: 100%;
     }
 }
+
+
+/*Contact Page*/
+.contactBody, .createBody, .germanyBody, .FranceBody {
+    height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    width: 100%;
+}
+
+    .contactBody .container, .createBody .container, .germanyBody .container, .FranceBody .container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+        .contactBody .container:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: url("../../Images/ContactPage/blurcontact.jpg") no-repeat center;
+            background-size: cover;
+            filter: blur(50px);
+            z-index: -1;
+        }
+
+        .FranceBody .container:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: url("../../Images/Paketa/France.jpg") no-repeat center;
+            background-size: cover;
+            filter: blur(50px);
+            z-index: -1;
+        }
+
+        .createBody .container:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: url("../../Images/Paketa/Italy.jpg") no-repeat center;
+            background-size: cover;
+            filter: blur(50px);
+            z-index: -1;
+        }
+
+        .germanyBody .container:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background: url("../../Images/Paketa/Germany.jpg") no-repeat center;
+            background-size: cover;
+            filter: blur(50px);
+            z-index: -1;
+        }
+
+    .contactBody .contact-box, .createBody .contact-box, .germanyBody .contact-box, .FranceBody .contact-box {
+        max-width: 850px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    }
+
+    .contactBody .left {
+        background: url("../Images/ContactPage/blurcontact.jpg") no-repeat center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .FranceBody .left {
+        background: url("../../Images/Paketa/France.jpg") no-repeat center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .germanyBody .left {
+        background: url("../../Images/Paketa/Germany.jpg") no-repeat center;
+        background-size: cover;
+        height: 100%;
+    }
+
+    .createBody .left {
+        background: url("../../Images/Paketa/Italy.jpg") no-repeat center;
+        background-size: cover;
+        height: 100%;
+    }
+
+.right {
+    padding: 25px 40px;
+}
+
+.contactBody h2, .createBody h2, .germanyBody h2, .FranceBody h2 {
+    position: relative;
+    padding: 0 0 10px;
+    margin-bottom: 10px;
+}
+
+    .contactBody h2:after, .createBody h2:after, .germanyBody h2:after, .FranceBody h2:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        height: 4px;
+        width: 50px;
+        border-radius: 2px;
+        background-color: #eb2922;
+    }
+
+.field {
+    width: 100%;
+    border: 2px solid rgba(0, 0, 0, 0);
+    outline: none;
+    background-color: rgba(230, 230, 230, 0.6);
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3s;
+}
+
+    .field:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+.contactBody textarea, .createBody textarea, .germanyBody textarea, .FranceBody textarea {
+    min-height: 150px;
+}
+
+.contactBody .btn, .createBody .btn, .germanyBody .btn, .FranceBody .btn {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: #00b5b5;
+    color: #fff;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+    .contactBody .btn:hover, .createBody .btn:hover, .germanyBody .btn:hover, .FranceBody .btn:hover {
+        background-color: #009c9c;
+    }
+
+.field:focus {
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px) {
+    .contactBody .contact-box, .createBody .contact-box, .germanyBody .contact-box, .FranceBody .contact-box {
+        grid-template-columns: 1fr;
+    }
+
+    .left {
+        height: 200px;
+    }
+}
+
+select, textarea {
+    color: #eb2922;
+}
+
+input {
+    color: #009c9c;
+}
+
+.textalign {
+    text-align: center;
+}
+
+input:focus {
+    color: #00b5b5;
+}
+
+textarea:focus {
+    color: #eb2922;
+}
+
+
+
+/*Login and Register Body*/
+.login {
+    padding-top: 50px;
+    padding-bottom: 125px;
+    background: url("../Images/Progressively-Loading-Images-With-Blur-Effect-min.png") no-repeat center;
+}
+
+    .login a {
+        text-decoration: none !important;
+    }
+
+.register a {
+    color: white;
+}
+
+    .register a:hover {
+        color: #009c9c;
+    }
+
+.forgot a {
+    color: white;
+}
+
+    .forgot a:hover {
+        color: #eb2922;
+    }
+
+.b {
+    color: floralwhite !important;
+}
+
+.registerbody {
+    padding-top: 50px;
+    padding-bottom: 200px;
+    background: url("../Images/images.jpg") no-repeat center;
+    background-size: cover;
+}
+
+.registerbody, .login ul {
+    list-style: none;
+}
+
+@media screen and (max-width: 760px) {
+    .mob {
+        margin-right: 240px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .mob {
+        margin-right: 100px;
+    }
+}
+
+.kot, .kot:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.kot1, .kot1:hover {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.kot2, .kot2:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/*Services Page*/
+.dimg1, .dimg2, .dimg3, .dimg4,
+.ger1, .ger2, .ger3, .ger4,
+.fra1, .fra2, .fra3, .fra4 {
+    position: relative;
+    opacity: 0.80;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*Italy*/
+.dimg1 {
+    background-image: url("../../Images/Services/Italy/ItalyService.jpg");
+    min-height: 520px;
+}
+
+.dimg2 {
+    background-image: url("../../Images/Services/Italy/MilanoServices.jpg");
+    min-height: 400px;
+}
+
+.dimg3 {
+    background-image: url("../../Images/Services/Italy/VeniceServices.jpg");
+    min-height: 400px;
+}
+
+.dimg4 {
+    background-image: url("../../Images/Services/Italy/RomeServices.jpg");
+    min-height: 520px;
+}
+
+/*Germany*/
+.ger1 {
+    background-image: url("../../Images/Services/Germany/GermanyServices.jpg");
+    min-height: 520px;
+}
+
+.ger2 {
+    background-image: url("../../Images/Services/Germany/BerlinServices.jpg");
+    min-height: 400px;
+}
+
+.ger3 {
+    background-image: url("../../Images/Services/Germany/MunichServices.jpg");
+    min-height: 400px;
+}
+
+.ger4 {
+    background-image: url("../../Images/Services/Germany/FrankfurtServices.jpg");
+    min-height: 520px;
+}
+
+/*France*/
+.fra1 {
+    background-image: url("../../Images/Services/France/FranceServices.jpg");
+    min-height: 520px;
+}
+
+.fra2 {
+    background-image: url("../../Images/Services/France/ParisServices.jpg");
+    min-height: 400px;
+}
+
+.fra3 {
+    background-image: url("../../Images/Services/France/LyonServices.jpg");
+    min-height: 400px;
+}
+
+.fra4 {
+    background-image: url("../../Images/Services/France/NiceServices.jpg");
+    min-height: 520px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.section-light {
+    background-color: #34495e;
+    color: white;
+}
+
+.section-dark {
+    background-color: #2b3c4c;
+    color: white;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+    .ptext .border {
+        background-color: #34495e;
+        color: white;
+        padding: 20px;
+    }
+
+        .ptext .border.trans {
+            background-color: transparent;
+        }
+/*SUB NAVIGATION BAR*/
+.servicespick ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 39%;
+    overflow: hidden;
+    background-color: #34495e;
+    margin: 0;
+}
+
+.servicespick li {
+    float: left;
+}
+
+    .servicespick li a {
+        display: flex;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        .servicespick li a:hover {
+            background-color: #2980b9;
+        }
+
+.active1 {
+    background-color: #2980b9;
+}
+
+/*Butoni Scroll back to top*/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: #ef5651;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+    #myBtn:hover {
+        background-color: #eb2922;
+    }

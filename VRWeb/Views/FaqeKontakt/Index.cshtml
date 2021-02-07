@@ -1,0 +1,57 @@
+﻿@model IEnumerable<VRWeb.Models.ContactUsPage>
+@{
+    ViewBag.Title = "Mesazhet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h4 style="margin-top: 2%; margin-bottom: 3%" class="text-center">
+    If you want to send a new message you can click
+    <span>@Html.ActionLink("here", "Contact", "Home", "", new { @class = "" })</span>
+    or Contact on Navigation Bar to go to Contact Page !
+</h4>
+<h3 class="text-center" style="margin-bottom: 1%"> Your Messages </h3>
+
+@using (Html.BeginForm("Index", "FaqeKontakt", FormMethod.Get, new { @class = "navbar-form navbar - left" }))
+{
+    <div class="form-group" style="display:flex; margin-left: 64.4%">
+        @Html.TextBox("kerkimi", null, new { @class = "form-control", @placeholder = "Kerko Mesazhet" })
+        <button type="submit" class="btn btn-dark"> Kerko</button>
+    </div>
+
+}
+
+@using (Html.BeginForm())
+{
+    <table class="table tab-content table-bordered table-hover" id="messageTable">
+        <tr>
+            <th>Emri: </th>
+            <th>Email: </th>
+            <th>Telefoni: </th>
+            <th>Mesazhi: </th>
+            <th>Edit:</th>
+            <th>Delete:</th>
+        </tr>
+        @foreach (var kontakt in Model)
+        {
+            <tr id="Mesazhe@(kontakt.contactID)">
+                <td>@kontakt.contactName</td>
+                <td>@kontakt.contactEmail</td>
+                <td>@kontakt.contactPhone</td>
+                <td>@kontakt.contactMessage</td>
+                <td>
+                    &nbsp;  @Html.ActionLink("Edit", "Edit", new { id = kontakt.contactID }, new { @class = "kot1 hover" })
+                    @*@Html.ActionLink("Delete", "Delete", new { id = kontakt.contactID }, new { @class = "kot1 hover" })*@
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp; <a id="@kontakt.contactID" class="FshiMesazheRekorde"><i style="font-size:25px; cursor:pointer;" class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+@section Scripts{
+    <script src="~/Scripts/CustomScripts/DeleteMessage.js"></script>
+}
