@@ -1,0 +1,64 @@
+﻿@model VRWeb.Models.PaketaInfo
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    <script type="text/javascript">
+        var SingleCheckbox = function (rb) {
+            var id = rb.id, uncheck;
+            if (id == 'regularPaketa') {
+                uncheck = document.getElementById('premiumPaketa');
+            } else {
+                uncheck = document.getElementById('regularPaketa');
+            }
+
+            uncheck.checked = false;
+        }
+    </script>
+}
+
+<div class="FranceBody">
+    <div class="container">
+        <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+                <h2>France</h2>
+                <br />
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <p> Lloji i Paketes</p>
+                    <b> @Html.LabelFor(model => model.regularPaketa, htmlAttributes: new { @class = "" })</b><span> &nbsp;</span><span> $279.99</span>
+                    @Html.CheckBoxFor(model => model.regularPaketa, new { onclick = "SingleCheckbox(this)" }) <span style="margin-right:10%"></span>
+                    @Html.ValidationMessageFor(model => model.regularPaketa, "", new { @class = "text-danger" })
+
+                    <b> @Html.LabelFor(model => model.premiumPaketa, new { htmlAttributes = new { @class = "field" } })</b> <span> &nbsp;</span><span> $484.99</span>
+                    @Html.CheckBoxFor(model => model.premiumPaketa, new { onclick = "SingleCheckbox(this)" })
+                    @Html.ValidationMessageFor(model => model.premiumPaketa, "", new { @class = "text-danger" })<br />
+                    <span style="color: red"> @ViewBag.message </span>
+                    <br />
+
+                    @Html.LabelFor(model => model.emriQytetit, htmlAttributes: new { @class = "" })
+                    @Html.EditorFor(model => model.emriQytetit, new { htmlAttributes = new { @class = "field" } })
+                    @Html.ValidationMessageFor(model => model.emriQytetit, "", new { @class = "text-danger" })
+                    <span style="color: red"> @ViewBag.qyteti </span>
+                    <br />
+
+                    @Html.LabelFor(model => model.numriDiteve, htmlAttributes: new { @class = "" })
+                    @Html.EditorFor(model => model.numriDiteve, new { htmlAttributes = new { @class = "field" } })
+                    @Html.ValidationMessageFor(model => model.numriDiteve, "", new { @class = "text-danger" })<br /> <br />
+
+                    <input type="submit" value="Create" class="btn btn-default" />
+                    <br /> <br />
+                }
+                <div>
+                    @Html.ActionLink("About France", "France", "Home", null, new { @class = "kot1 hover" }) &nbsp; |&nbsp; 
+                    @Html.ActionLink("Paketat Tuaja", "Index", null, new { @class = "kot1 hover" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

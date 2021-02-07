@@ -1,0 +1,102 @@
+﻿@model IEnumerable<VRWeb.Models.PaketaInfo>
+
+@{
+    ViewBag.Title = "Paketa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    @*<div class="checkbox" style="margin-left: 88%">
+        <label>
+            <input id="darkclick" type="checkbox" data-toggle="toggle" onclick="myFunction()">
+            Enable Dark Mode
+        </label>
+    </div>*@
+    <h2 class="text-center">Paketat tuaja</h2>
+    <p class="text-center">
+        <span style="font-size: 20px"> Per te blere paketa te tjera: </span> &nbsp; &nbsp; &nbsp;
+        <span>@Html.ActionLink("Italy Paketa", "Italy", null, new { @class = "kot1 hover" })</span> &nbsp; &nbsp; |  &nbsp;
+        <span>@Html.ActionLink("France Paketa", "France", null, new { @class = "kot1 hover" })</span> &nbsp; &nbsp; | &nbsp;
+        <span>@Html.ActionLink("Germany Paketa", "Germany", null, new { @class = "kot1 hover" })</span>
+    </p>
+    <br />
+    @using (Html.BeginForm("Index", "PaketaInfoes", FormMethod.Get, new { @class = "navbar-form navbar - left" }))
+    {
+        <div class="form-group" style="display:flex; margin-left: 66.4%">
+            @Html.TextBox("kerkimi", null, new { @class = "form-control", @placeholder = "Kerko Qytet/Shtet" })
+            <button type="submit" class="btn btn-dark"> Kerko</button>
+        </div>
+
+    }
+
+    <table class="table table-bordered table-hover" id="paketaTable">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.regularPaketa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.premiumPaketa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.emriShtetit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.emriQytetit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numriDiteve)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.vendqendrimiHotelYje)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cmimi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationUser.Email)
+            </th>
+            <th>
+                More...
+            </th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr id="Paketa@(item.paketaID)">
+                <td>
+                    @Html.DisplayFor(modelItem => item.regularPaketa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.premiumPaketa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.emriShtetit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.emriQytetit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numriDiteve)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vendqendrimiHotelYje)
+                </td>
+                <td>
+                    $ @Html.DisplayFor(modelItem => item.cmimi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApplicationUser.Email)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.paketaID }, new { @class = "kot1 hover" }) @*|
+                    @Html.ActionLink("Delete", "Delete", new { id = item.paketaID }, new { @class = "kot1 hover" })*@
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp; <a id="@item.paketaID" class="FshiPaketaRekorde"><i style="font-size:25px; cursor:pointer;" class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        }
+
+    </table>
+@section Scripts{
+    <script src="~/Scripts/CustomScripts/DeletePaketa.js"></script>
+    }

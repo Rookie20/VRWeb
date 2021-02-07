@@ -1,0 +1,42 @@
+﻿@using VRWeb.Models
+@model ContactUsPage
+@{
+    ViewBag.Title = "Contact";
+}
+
+
+<div class="contactBody">
+    <div class="container">
+        <div class="contact-box">
+            <div class="left"></div>
+            <div class="right">
+                <h2>Contact Us</h2>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    if (!User.Identity.IsAuthenticated)
+                    {
+                        @Html.ValidationMessageFor(contact => contact.contactName, "", new { @class = "text-danger" })
+                        @Html.TextBoxFor(contact => contact.contactName, new { placeholder = "Your Name", @class = "field" })
+
+                        @Html.ValidationMessageFor(contact => contact.contactEmail, "", new { @class = "text-danger" })
+                        @Html.TextBoxFor(contact => contact.contactEmail, new { placeholder = "Your Email", @class = "field" })
+                    }
+                    
+                    @Html.ValidationMessageFor(contact => contact.contactPhone, "", new { @class = "text-danger" })
+                    @Html.TextBoxFor(contact => contact.contactPhone, new { placeholder = "Phone", @class = "field" })
+
+                    @Html.ValidationMessageFor(contact => contact.contactMessage, "", new { @class = "text-danger" })
+                    @Html.TextAreaFor(contact => contact.contactMessage, new { placeholder = "Your Message", @class = "field red" })
+
+                    <button class="btn" type="submit">Send</button>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,13 +1,16 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using VRWeb.Models;
 
 namespace VRWeb.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
             return View();
@@ -17,6 +20,54 @@ namespace VRWeb.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            //var kontakti = new ContactUsPage();
+            //ViewBag.contactEmail = new SelectList(db.ContactUs, "contactEmail", "emri", kontakti.contactEmail);
+
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Contact([Bind(Include = "contactName, contactEmail, contactPhone, contactMessage")] ContactUsPage contactUs)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                ModelState["contactEmail"].Errors.Clear();
+                var user = User.Identity.GetUserName();
+                contactUs.contactEmail = user;
+
+                ModelState["contactName"].Errors.Clear();
+                string fullName = (from fn in db.Users
+                                   where (fn.Email == user)
+                                   select fn.FullName).Single();
+                contactUs.contactName = fullName;
+            }
+
+
+            if (ModelState.IsValid)
+            {
+                db.ContactUs.Add(contactUs);
+                db.SaveChanges();
+                return RedirectToAction("Contact");
+            }
+            return View(contactUs);
+        }
+
+        public ActionResult Italy()
+        {
+            return View();
+        }
+        public ActionResult France()
+        {
+            return View();
+        }
+        public ActionResult Germany()
+        {
             return View();
         }
 

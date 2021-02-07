@@ -29,17 +29,40 @@
                         @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                     <li>
-                        @Html.ActionLink("Particle", "PolygonShredder", "Home", new { area = "" }, new { @class = "nav-link" })
+                        @Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                     <li>
-                        @Html.ActionLink("VR Game Demo", "VRGameDemo", "Home", new { area = "" }, new { @class = "nav-link" })
+                        @Html.ActionLink("VR Demo", "PolygonShredder", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
+                    <li>
+                        @Html.ActionLink("Services", "Italy", "Home", "", new { @class = "nav-link" })
+                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>
+                            @Html.ActionLink("Create your game", "VRGameDemo", "Home", new { area = "" }, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"> Manage </a>
+                            <div class="dropdown-menu">
+                                @Html.ActionLink("Paketat", "Index", "PaketaInfoes", "", new { @class = "dropdown-item" })
+                                @Html.ActionLink("Kontaktet", "Index", "FaqeKontakt", "", new { @class = "dropdown-item" })
+
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <div class="dropdown-divider"></div>
+                                    @Html.ActionLink("Perdoruesit", "Index", "Administrimi", "", new { @class = "dropdown-item" })
+                                }
+                            </div>
+                        </li>
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </nav>
     </header>
     <div class="body-content">
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
         @RenderBody()
         <footer>
             <div class="section-footer text-center bg-light p-2">
@@ -77,6 +100,25 @@
         sr.reveal('.section-2 .d-flex');
         sr.reveal('.section-3 .col-md-4');
         sr.reveal('.section-4 .col-md-7, .col-md-5');
+    </script>
+
+    <script type="text/javascript">
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function () {
+            scrollFunction()
+        };
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
     </script>
 
     @Scripts.Render("~/bundles/jquery")

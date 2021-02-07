@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace VRWeb.Models
@@ -50,6 +51,7 @@ namespace VRWeb.Models
     {
         [Required]
         [Display(Name = "Email")]
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "No Special Characters")]
         [EmailAddress]
         public string Email { get; set; }
 
@@ -67,6 +69,7 @@ namespace VRWeb.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
+        [RegularExpression("^[a-zA-Z0-9_\\.-]+@([a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$", ErrorMessage = "No Special Characters")]
         public string Email { get; set; }
 
         [Required]
@@ -79,6 +82,17 @@ namespace VRWeb.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Your Birthday")]
+        [DataType(DataType.Date)]
+        [ValidateDateRange]
+        public DateTime Datelindja { get; set; }
+
+        [Required]
+        [Display(Name = "Full Name")]
+        [RegularExpression(@"^([a-zA-Z]{1}[a-zA-Z]*[\s]{0,1}[a-zA-Z])+([\s]{0,1}[a-zA-Z]+)", ErrorMessage = "Only letters and carefull with spaces!")]
+        public string FullName { get; set; }
     }
 
     public class ResetPasswordViewModel

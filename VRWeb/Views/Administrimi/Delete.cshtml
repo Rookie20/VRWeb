@@ -1,0 +1,60 @@
+﻿@model VRWeb.Models.ApplicationUser
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="dl-horizontal text-center">Delete</h2>
+<h3 class="dl-horizontal text-center">Are you sure you want to delete your message?</h3>
+<div class="dl-horizontal text-center">
+    <hr />
+    <dl class="dl-horizontal text-center">
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Datelindja)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Datelindja)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        @if (Model.PhoneNumber != null)
+        {
+            <dd>
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+        }
+        else
+        {
+            <dd><i style="color: red; font-size: 17px;"> null </i></dd>
+        }
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color text-center">
+            <input type="submit" value="Delete" class="btn btn-outline-danger" />
+            @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-outline-primary" })
+        </div>
+    }
+</div>
+

@@ -1,0 +1,79 @@
+﻿@model VRWeb.Models.PaketaInfo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Details</h2>
+
+<div class="text-center">
+    <h4>Informacinet e Paketes</h4>
+    <hr style="width:80vw; margin: 15px auto;" />
+    <dl class="dl-horizontal">
+        @if (Model.regularPaketa == true)
+        {
+            <dt>
+                @Html.DisplayNameFor(model => model.regularPaketa)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.regularPaketa)
+            </dd>
+        }
+        else 
+        { 
+            <dt>
+                @Html.DisplayNameFor(model => model.premiumPaketa)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.premiumPaketa)
+            </dd>
+        }
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emriShtetit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emriShtetit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.emriQytetit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.emriQytetit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numriDiteve)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numriDiteve)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vendqendrimiHotelYje)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vendqendrimiHotelYje)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cmimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cmimi)
+        </dd>
+
+    </dl>
+</div>
+<p class="text-center">
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-outline-primary"})
+</p>
