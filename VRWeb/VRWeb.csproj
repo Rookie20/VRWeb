@@ -204,6 +204,7 @@
     <Content Include="Content\Images\pexels-bruno-bueno-3907022.jpg" />
     <Content Include="Content\Images\pexels-julia-m-cameron-4144293.jpg" />
     <Content Include="Content\Images\pexels-mali-maeder-756439.jpg" />
+    <Content Include="Content\Images\VR.jpg" />
     <Content Include="Content\IndexStyleSheet.css" />
     <Content Include="Content\PolygonImages\snapshot.jpg" />
     <Content Include="spotlight.jpg" />

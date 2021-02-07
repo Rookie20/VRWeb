@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - VIRTUAL REALITY</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
             @Html.ActionLink("Virtual Reality", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
                     aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
@@ -42,26 +42,28 @@
     <div class="body-content">
         @RenderBody()
         <footer>
-            <div class="section-footer text-center">
-                <h4 style="margin-top: 4%;"> Find more information about VR from Us</h4>
-                <h4 class="my-4"> If you need any help</h4>
-
-                <div class="form-inline justify-content-center">
-                    <input type="text" name="Email" id="email" placeholder="Email" size="40" class="form-control px-4 py-2" />
-                    <input type="button" value="Contact Us" class="btn btn-danger px-4 py-2" />
-                </div>
-
-                <div class="social" style="margin: 5%;">
-                    <div class="d-flex flex-row justify-content-center">
-                        <i class="fab fa-facebook m-2"></i>
-                        <i class="fab fa-twitter m-2"></i>
-                        <i class="fab fa-instagram m-2"></i>
-                        <i class="fab fa-youtube m-2"></i>
-                        <i class="fab fa-twitch m-2"></i>
+            <div class="section-footer text-center bg-light p-2">
+                <div class="d-flex justify-content-center">
+                    <div class="col-4 form px-5">
+                        <h4 class="my-4">If you need any help, contact us!</h4>
+                        <input type="text" name="Name" id="name" placeholder="Your name" size="40" class="form-control px-2 py-2 my-2" />
+                        <input type="text" name="Email" id="email" placeholder="Your email" size="40" class="form-control px-2 py-2 my-2" />
+                        <textarea placeholder="Your message" class="form-control px-2 py-2 my-2"></textarea>
+                        <input type="button" value="Contact Us" class="btn btn-info px-2 py-2 my-2" />
+                    </div>
+                    <div class="social col-4">
+                        <h4 class="my-4">Follow us on social media!</h4>
+                        <div class="d-flex flex-row justify-content-center pt-4">
+                            <i class="fab fa-facebook m-2"></i>
+                            <i class="fab fa-twitter m-2"></i>
+                            <i class="fab fa-instagram m-2"></i>
+                            <i class="fab fa-youtube m-2"></i>
+                            <i class="fab fa-twitch m-2"></i>
+                        </div>
                     </div>
                 </div>
-
-                <h5 style="color: lightcoral">&copy; @DateTime.Now.Year - VR Web</h5>
+                <hr />
+                <h5 class="font-weight-bold">&copy; @DateTime.Now.Year - VR Web</h5>
             </div>
         </footer>
     </div>
