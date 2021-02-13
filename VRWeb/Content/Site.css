@@ -585,19 +585,19 @@ body {
     }
 
     .FranceBody .left {
-        background: url("../../Images/Paketa/France.jpg") no-repeat center;
+        background: url("../Images/Services/PlaystationVR/PlayStation-VR.jpg") no-repeat center;
         background-size: cover;
         height: 100%;
     }
 
     .germanyBody .left {
-        background: url("../../Images/Paketa/Germany.jpg") no-repeat center;
+        background: url("../Images/Services/ValveIndex/valve-index-vr-full-kit.jpg") no-repeat center;
         background-size: cover;
         height: 100%;
     }
 
     .createBody .left {
-        background: url("../../Images/Paketa/Italy.jpg") no-repeat center;
+        background: url("../Images/Services/OculusRift/Oculus_Quest_black.png") no-repeat center;
         background-size: cover;
         height: 100%;
     }
@@ -779,66 +779,66 @@ textarea:focus {
 
 /*Italy*/
 .dimg1 {
-    background-image: url("../../Images/Services/Italy/ItalyService.jpg");
+    background-image: url("../Images/Services/OculusRift/Oculus_Quest_white.png");
     min-height: 520px;
 }
 
 .dimg2 {
-    background-image: url("../../Images/Services/Italy/MilanoServices.jpg");
+    background-image: url("../Images/Services/OculusRift/Oculus_Quest_black.png");
     min-height: 400px;
 }
 
 .dimg3 {
-    background-image: url("../../Images/Services/Italy/VeniceServices.jpg");
+    background-image: url("../Images/Services/OculusRift/Borderlands-2-VR.jpg");
     min-height: 400px;
 }
 
-.dimg4 {
+/*.dimg4 {
     background-image: url("../../Images/Services/Italy/RomeServices.jpg");
     min-height: 520px;
-}
+}*/
 
 /*Germany*/
 .ger1 {
-    background-image: url("../../Images/Services/Germany/GermanyServices.jpg");
+    background-image: url("../Images/Services/ValveIndex/valve-index-vr-full-kit.jpg");
     min-height: 520px;
 }
 
 .ger2 {
-    background-image: url("../../Images/Services/Germany/BerlinServices.jpg");
+    background-image: url("../Images/Services/ValveIndex/valve-index-person-people-5.jpg");
     min-height: 400px;
 }
 
 .ger3 {
-    background-image: url("../../Images/Services/Germany/MunichServices.jpg");
+    background-image: url("../Images/Services/ValveIndex/iQQvcfubwVjCFPGbkmyDXG.jpg");
     min-height: 400px;
 }
 
-.ger4 {
+/*.ger4 {
     background-image: url("../../Images/Services/Germany/FrankfurtServices.jpg");
     min-height: 520px;
-}
+}*/
 
 /*France*/
 .fra1 {
-    background-image: url("../../Images/Services/France/FranceServices.jpg");
+    background-image: url("../Images/Services/PlaystationVR/playstationVR.jpeg");
     min-height: 520px;
 }
 
 .fra2 {
-    background-image: url("../../Images/Services/France/ParisServices.jpg");
+    background-image: url("../Images/Services/PlaystationVR/PlayStation-VR.jpg");
     min-height: 400px;
 }
 
 .fra3 {
-    background-image: url("../../Images/Services/France/LyonServices.jpg");
+    background-image: url("../Images/Services/PlaystationVR/14144924451l.jpg");
     min-height: 400px;
 }
 
-.fra4 {
+/*.fra4 {
     background-image: url("../../Images/Services/France/NiceServices.jpg");
     min-height: 520px;
-}
+}*/
 
 .section {
     text-align: center;
@@ -880,7 +880,7 @@ textarea:focus {
     list-style-type: none;
     display: flex;
     flex-direction: row;
-    padding: 0px 39%;
+    padding: 0px 36%;
     overflow: hidden;
     background-color: #34495e;
     margin: 0;

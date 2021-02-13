@@ -16,7 +16,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+        <nav class="navbar navbar-expand-lg navbar-light">
             @Html.ActionLink("Virtual Reality", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
                     aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle Navigation">
@@ -35,7 +35,7 @@
                         @Html.ActionLink("VR Demo", "PolygonShredder", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                     <li>
-                        @Html.ActionLink("Services", "Italy", "Home", "", new { @class = "nav-link" })
+                        @Html.ActionLink("Services", "OculusQuestService", "Home", "", new { @class = "nav-link" })
                     </li>
                     @if (User.Identity.IsAuthenticated)
                     {

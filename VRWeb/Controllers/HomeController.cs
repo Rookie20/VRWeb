@@ -58,15 +58,15 @@ namespace VRWeb.Controllers
             return View(contactUs);
         }
 
-        public ActionResult Italy()
+        public ActionResult OculusQuestService()
         {
             return View();
         }
-        public ActionResult France()
+        public ActionResult PlaystationVrService()
         {
             return View();
         }
-        public ActionResult Germany()
+        public ActionResult ValveIndexService()
         {
             return View();
         }

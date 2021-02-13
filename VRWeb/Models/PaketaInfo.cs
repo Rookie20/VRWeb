@@ -13,13 +13,14 @@ namespace VRWeb.Models
         [Key]
         public int paketaID { get; set; }
 
-        [Display(Name = "Regular")]
+        [Display(Name = "64 GB")]
         public bool regularPaketa { get; set; }
 
-        [Display(Name = "Premium")]
+        [Display(Name = "256 GB")]
         public bool premiumPaketa { get; set; }
 
         [Display(Name = "Shteti")]
+        [RegularExpression(@"^([a-zA-Z]{1}[a-zA-Z]*[\s]{0,1}[a-zA-Z])+([\s]{0,1}[a-zA-Z]+)", ErrorMessage = "Pick a valid Country")]
         public string emriShtetit { get; set; }
 
         [Required]
@@ -28,13 +29,8 @@ namespace VRWeb.Models
         public string emriQytetit { get; set; }
 
         [Required]
-        [RegularExpression("^[0-9]*$", ErrorMessage = "Numbers only")]
-        [Range(1, 10, ErrorMessage = "You can only pick between 1 and 10 days of vacation")]
-        [Display(Name = "Numri i diteve")]
-        public string numriDiteve { get; set; }
-
-        [Display(Name = "Yjet e Hotelit")]
-        public int vendqendrimiHotelYje { get; set; }
+        [MaxLength(25)]
+        public string zipCode { get; set; }
 
         [Display(Name = "Çmimi")]
         public decimal cmimi { get; set; }

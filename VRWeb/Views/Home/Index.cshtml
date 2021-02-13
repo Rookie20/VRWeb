@@ -12,8 +12,8 @@
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
                     </p>
                     <div class="d-flex flex-row">
-                        <input type="button" value="Buy VR" class="btn site-btn1 px-4 py-3 mr-4 btn-dark" />
-                        <input type="button" value="What to expect" class="btn site-btn2 px-4 py-3 mr-4 btn-light" />
+                        @Html.ActionLink("Buy VR", "OculusQuestService", "Home", null, new { @class = "btn site-btn1 px-4 py-3 mr-4 btn-dark" })
+                        @Html.ActionLink("What to expect", "PolygonShredder", "Home", null, new { @class = "btn site-btn2 px-4 py-3 mr-4 btn-light" })
                     </div>
                 </div> 
             </div>
@@ -74,7 +74,7 @@
                     <p class="para">
                         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
                     </p>
-                    <input type="button" value="Show" class="btn btn-success" />
+                    <input type="button" value="Show" class="btn btn-danger" />
                 </div>
             </div>
         </div>

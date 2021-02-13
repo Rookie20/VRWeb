@@ -66,7 +66,7 @@ namespace VRWeb.Controllers
 
         // GET: PaketaInfoes/Create
         [Authorize]
-        public ActionResult Italy()
+        public ActionResult OculusQuest()
         {
             return View();
         }
@@ -75,38 +75,23 @@ namespace VRWeb.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public ActionResult Italy([Bind(Include = "paketaID,emriShtetit,emriQytetit,numriDiteve,vendqendrimiHotelYje,cmimi,regularPaketa,premiumPaketa")] PaketaInfo paketaInfo)
+        public ActionResult OculusQuest([Bind(Include = "paketaID,emriShtetit,emriQytetit,zipCode,cmimi,regularPaketa,premiumPaketa")] PaketaInfo paketaInfo)
         {
-            bool selectedlloji;
-            bool selectedQyteti;
-            if(paketaInfo.regularPaketa == false && paketaInfo.premiumPaketa == false) {
-                selectedlloji = false;
-                ViewBag.message = "Zgjidhni llojin e paketes";
-            }
-            else{
-                selectedlloji = true;
-            }
-            if (paketaInfo.emriQytetit != "Milano" && paketaInfo.emriQytetit != "Venice" && paketaInfo.emriQytetit != "Rome") {
-                selectedQyteti = false;
-                ViewBag.qyteti = "Qytetet qe ofrojme jane Milano, Venice, Rome";
-            }
-            else{
-                selectedQyteti = true;
-            }
+
             var currentUserID = User.Identity.GetUserId();
             var paketaUser = db.paketaInfos.FirstOrDefault(d => d.userKey == currentUserID);
-            if (selectedQyteti == true && selectedlloji == true && ModelState.IsValid)
+            if (ModelState.IsValid)
             { 
+                if(paketaInfo.regularPaketa == true)
+                {
+                    paketaInfo.cmimi = 299.00m;
+                }
+                else
+                {
+                    paketaInfo.cmimi = 399.00m;
+                }
                 paketaInfo.userKey = currentUserID;
-                paketaInfo.emriShtetit = "Italy";
-                if(paketaInfo.regularPaketa == true) { 
-                    paketaInfo.vendqendrimiHotelYje = 4;
-                    paketaInfo.cmimi = 124.99m;
-                }
-                else {
-                    paketaInfo.vendqendrimiHotelYje = 5;
-                    paketaInfo.cmimi = 549.99m;
-                }
+
                 db.paketaInfos.Add(paketaInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -115,7 +100,7 @@ namespace VRWeb.Controllers
         }
 
         [Authorize]
-        public ActionResult Germany()
+        public ActionResult ValveIndex()
         {
             return View();
         }
@@ -126,38 +111,22 @@ namespace VRWeb.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public ActionResult Germany([Bind(Include = "paketaID,emriShtetit,emriQytetit,numriDiteve,vendqendrimiHotelYje,cmimi,regularPaketa,premiumPaketa")] PaketaInfo paketaInfo)
+        public ActionResult ValveIndex([Bind(Include = "paketaID,emriShtetit,emriQytetit,zipCode,cmimi,regularPaketa,premiumPaketa")] PaketaInfo paketaInfo)
         {
-            bool selectedlloji;
-            bool selectedQyteti;
-            if (paketaInfo.regularPaketa == false && paketaInfo.premiumPaketa == false) {
-                selectedlloji = false;
-                ViewBag.message = "Zgjidhni llojin e paketes";
-            }
-            else {
-                selectedlloji = true;
-            }
-            if (paketaInfo.emriQytetit != "Berlin" && paketaInfo.emriQytetit != "Munich" && paketaInfo.emriQytetit != "Frankfurt"){
-                selectedQyteti = false;
-                ViewBag.qyteti = "Qytetet qe ofrojme jane Berlin, Munich, Frankfurt";
-            }
-            else{
-                selectedQyteti = true;
-            }
+            
             var currentUserID = User.Identity.GetUserId();
             var paketaUser = db.paketaInfos.FirstOrDefault(d => d.userKey == currentUserID);
-            if (selectedQyteti == true && selectedlloji == true && ModelState.IsValid)
+            if (ModelState.IsValid)
             {
+                if (paketaInfo.regularPaketa == true)
+                {
+                    paketaInfo.cmimi = 999.00m;
+                }
+                else
+                {
+                    paketaInfo.cmimi = 1399.00m;
+                }
                 paketaInfo.userKey = currentUserID;
-                paketaInfo.emriShtetit = "Germany";
-                if (paketaInfo.regularPaketa == true){ 
-                    paketaInfo.vendqendrimiHotelYje = 3;
-                    paketaInfo.cmimi = 99.99m;
-                }
-                else {
-                    paketaInfo.vendqendrimiHotelYje = 4;
-                    paketaInfo.cmimi = 264.99m;
-                }
                 db.paketaInfos.Add(paketaInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -166,7 +135,7 @@ namespace VRWeb.Controllers
         }
 
         [Authorize]
-        public ActionResult France()
+        public ActionResult PlaystationVr()
         {
             return View();
         }
@@ -177,38 +146,13 @@ namespace VRWeb.Controllers
         [HttpPost]
         [Authorize]
         [ValidateAntiForgeryToken]
-        public ActionResult France([Bind(Include = "paketaID,emriShtetit,emriQytetit,numriDiteve,vendqendrimiHotelYje,cmimi,regularPaketa,premiumPaketa")] PaketaInfo paketaInfo)
+        public ActionResult PlaystationVr([Bind(Include = "paketaID,emriShtetit,emriQytetit,zipCode,cmimi,regularPaketa,premiumPaketa")] PaketaInfo paketaInfo)
         {
-            bool selectedlloji;
-            bool selectedQyteti;
-            if (paketaInfo.regularPaketa == false && paketaInfo.premiumPaketa == false) {
-                selectedlloji = false;
-                ViewBag.message = "Zgjidhni llojin e paketes";
-            }
-            else {
-                selectedlloji = true;
-            }
-            if (paketaInfo.emriQytetit != "Paris" && paketaInfo.emriQytetit != "Nice" && paketaInfo.emriQytetit != "Lyon"){
-                selectedQyteti = false;
-                ViewBag.qyteti = "Qytetet qe ofrojme jane Paris, Nice, Lyon";
-            }
-            else{
-                selectedQyteti = true;
-            }
             var currentUserID = User.Identity.GetUserId();
             var paketaUser = db.paketaInfos.FirstOrDefault(d => d.userKey == currentUserID);
-            if (selectedQyteti == true && selectedlloji == true && ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 paketaInfo.userKey = currentUserID;
-                paketaInfo.emriShtetit = "France";
-                if(paketaInfo.regularPaketa == true) {
-                    paketaInfo.vendqendrimiHotelYje = 4;
-                    paketaInfo.cmimi = 279.99m;
-                }
-                else{
-                    paketaInfo.vendqendrimiHotelYje = 5;
-                    paketaInfo.cmimi = 484.99m;
-                }
                 db.paketaInfos.Add(paketaInfo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
