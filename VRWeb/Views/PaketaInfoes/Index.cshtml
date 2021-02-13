@@ -13,9 +13,9 @@
     <h2 class="text-center">Paketat tuaja</h2>
     <p class="text-center">
         <span style="font-size: 20px"> Per te blere paketa te tjera: </span> &nbsp; &nbsp; &nbsp;
-        <span>@Html.ActionLink("Italy Paketa", "Italy", null, new { @class = "kot1 hover" })</span> &nbsp; &nbsp; |  &nbsp;
-        <span>@Html.ActionLink("France Paketa", "France", null, new { @class = "kot1 hover" })</span> &nbsp; &nbsp; | &nbsp;
-        <span>@Html.ActionLink("Germany Paketa", "Germany", null, new { @class = "kot1 hover" })</span>
+        <span>@Html.ActionLink("Oculus Quest II", "OculusQuest", null, new { @class = "kot1 hover" })</span> &nbsp; &nbsp; |  &nbsp;
+        <span>@Html.ActionLink("Playstation VR", "PlaystationVr", null, new { @class = "kot1 hover" })</span> &nbsp; &nbsp; | &nbsp;
+        <span>@Html.ActionLink("Valve Index", "ValveIndex", null, new { @class = "kot1 hover" })</span>
     </p>
     <br />
     @using (Html.BeginForm("Index", "PaketaInfoes", FormMethod.Get, new { @class = "navbar-form navbar - left" }))
@@ -42,10 +42,7 @@
                 @Html.DisplayNameFor(model => model.emriQytetit)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.numriDiteve)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.vendqendrimiHotelYje)
+                @Html.DisplayNameFor(model => model.zipCode)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.cmimi)
@@ -75,10 +72,7 @@
                     @Html.DisplayFor(modelItem => item.emriQytetit)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.numriDiteve)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.vendqendrimiHotelYje)
+                    @Html.DisplayFor(modelItem => item.zipCode)
                 </td>
                 <td>
                     $ @Html.DisplayFor(modelItem => item.cmimi)

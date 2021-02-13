@@ -180,9 +180,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202101231915054_Initial.cs" />
-    <Compile Include="Migrations\202101231915054_Initial.Designer.cs">
-      <DependentUpon>202101231915054_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202102131005489_InitialMigration.cs" />
+    <Compile Include="Migrations\202102131005489_InitialMigration.Designer.cs">
+      <DependentUpon>202102131005489_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -221,18 +221,15 @@
     <Content Include="Images\Paketa\Germany.jpg" />
     <Content Include="Images\Paketa\Italy.jpg" />
     <Content Include="Images\Progressively-Loading-Images-With-Blur-Effect-min.png" />
-    <Content Include="Images\Services\France\FranceServices.jpg" />
-    <Content Include="Images\Services\France\LyonServices.jpg" />
-    <Content Include="Images\Services\France\NiceServices.jpg" />
-    <Content Include="Images\Services\France\ParisServices.jpg" />
-    <Content Include="Images\Services\Germany\BerlinServices.jpg" />
-    <Content Include="Images\Services\Germany\FrankfurtServices.jpg" />
-    <Content Include="Images\Services\Germany\GermanyServices.jpg" />
-    <Content Include="Images\Services\Germany\MunichServices.jpg" />
-    <Content Include="Images\Services\Italy\ItalyService.jpg" />
-    <Content Include="Images\Services\Italy\MilanoServices.jpg" />
-    <Content Include="Images\Services\Italy\RomeServices.jpg" />
-    <Content Include="Images\Services\Italy\VeniceServices.jpg" />
+    <Content Include="Images\Services\OculusRift\Borderlands-2-VR.jpg" />
+    <Content Include="Images\Services\OculusRift\Oculus_Quest_black.png" />
+    <Content Include="Images\Services\OculusRift\Oculus_Quest_white.png" />
+    <Content Include="Images\Services\PlaystationVR\14144924451l.jpg" />
+    <Content Include="Images\Services\PlaystationVR\PlayStation-VR.jpg" />
+    <Content Include="Images\Services\PlaystationVR\playstationVR.jpeg" />
+    <Content Include="Images\Services\ValveIndex\iQQvcfubwVjCFPGbkmyDXG.jpg" />
+    <Content Include="Images\Services\ValveIndex\valve-index-person-people-5.jpg" />
+    <Content Include="Images\Services\ValveIndex\valve-index-vr-full-kit.jpg" />
     <Content Include="Images\thinking.jpg" />
     <Content Include="Scripts\CustomScripts\DeleteMessage.js" />
     <Content Include="Scripts\CustomScripts\DeletePaketa.js" />
@@ -2117,9 +2114,9 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\PolygonShredder.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\France.cshtml" />
-    <Content Include="Views\Home\Germany.cshtml" />
-    <Content Include="Views\Home\Italy.cshtml" />
+    <Content Include="Views\Home\PlaystationVrService.cshtml" />
+    <Content Include="Views\Home\ValveIndexService.cshtml" />
+    <Content Include="Views\Home\OculusQuestService.cshtml" />
     <Content Include="Views\FaqeKontakt\Delete.cshtml" />
     <Content Include="Views\FaqeKontakt\Edit.cshtml" />
     <Content Include="Views\FaqeKontakt\Index.cshtml" />
@@ -2130,10 +2127,10 @@
     <Content Include="Views\Register.cshtml" />
     <Content Include="Views\PaketaInfoes\Delete.cshtml" />
     <Content Include="Views\PaketaInfoes\Details.cshtml" />
-    <Content Include="Views\PaketaInfoes\France.cshtml" />
-    <Content Include="Views\PaketaInfoes\Germany.cshtml" />
+    <Content Include="Views\PaketaInfoes\PlaystationVr.cshtml" />
+    <Content Include="Views\PaketaInfoes\ValveIndex.cshtml" />
     <Content Include="Views\PaketaInfoes\Index.cshtml" />
-    <Content Include="Views\PaketaInfoes\Italy.cshtml" />
+    <Content Include="Views\PaketaInfoes\OculusQuest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2150,8 +2147,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202101231915054_Initial.resx">
-      <DependentUpon>202101231915054_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202102131005489_InitialMigration.resx">
+      <DependentUpon>202102131005489_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
