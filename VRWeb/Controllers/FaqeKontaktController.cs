@@ -22,7 +22,7 @@ namespace VRWeb.Controllers
             _dbContext.Dispose();
         }
 
-
+        //Advances search
         [Authorize]
         public ActionResult Index(string kerkimi)
         {
