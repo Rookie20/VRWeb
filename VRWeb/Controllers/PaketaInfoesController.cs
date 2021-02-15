@@ -11,7 +11,7 @@ namespace VRWeb.Controllers
     {
         private readonly ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: PaketaInfoes
+        // GET: PaketaInfoes Buy
         [Authorize]
         public ActionResult Index(string kerkimi)
         {

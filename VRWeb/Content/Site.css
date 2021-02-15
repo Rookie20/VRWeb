@@ -68,9 +68,8 @@ body {
         color: lightcoral !important;
     }
     
-    .active .nav-link {
-        color: lightcoral !important;
-    }
+    
+    
 
 .site-content {
     background-image: url("Images/oculus-rift-s-2-1.jpg");
@@ -218,7 +217,6 @@ body {
     color: #00E8E8;
     font-size: 40px;
 }
-
 
 /*Media Screen*/
 
@@ -730,7 +728,7 @@ textarea:focus {
 .registerbody {
     padding-top: 50px;
     padding-bottom: 200px;
-    background: url("../Images/images.jpg") no-repeat center;
+    background: url("../Content/Images/contact_background.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -777,7 +775,7 @@ textarea:focus {
     background-attachment: fixed;
 }
 
-/*Italy*/
+/*Oculus*/
 .dimg1 {
     background-image: url("../Images/Services/OculusRift/Oculus_Quest_white.png");
     min-height: 520px;
@@ -793,12 +791,8 @@ textarea:focus {
     min-height: 400px;
 }
 
-/*.dimg4 {
-    background-image: url("../../Images/Services/Italy/RomeServices.jpg");
-    min-height: 520px;
-}*/
 
-/*Germany*/
+/*Valve*/
 .ger1 {
     background-image: url("../Images/Services/ValveIndex/valve-index-vr-full-kit.jpg");
     min-height: 520px;
@@ -814,12 +808,7 @@ textarea:focus {
     min-height: 400px;
 }
 
-/*.ger4 {
-    background-image: url("../../Images/Services/Germany/FrankfurtServices.jpg");
-    min-height: 520px;
-}*/
-
-/*France*/
+/*Playstation*/
 .fra1 {
     background-image: url("../Images/Services/PlaystationVR/playstationVR.jpeg");
     min-height: 520px;
@@ -835,10 +824,6 @@ textarea:focus {
     min-height: 400px;
 }
 
-/*.fra4 {
-    background-image: url("../../Images/Services/France/NiceServices.jpg");
-    min-height: 520px;
-}*/
 
 .section {
     text-align: center;
@@ -875,6 +860,7 @@ textarea:focus {
         .ptext .border.trans {
             background-color: transparent;
         }
+
 /*SUB NAVIGATION BAR*/
 .servicespick ul {
     list-style-type: none;
